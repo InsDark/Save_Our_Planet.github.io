@@ -1,0 +1,237 @@
+// Colors
+$color1: #000000;
+$Color2:#2b2a2a;
+$color3: #008000;
+$color4: #015001;
+$color5: #fff;
+
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    img{
+        width: 100%;
+        height: auto;
+    }
+    nav{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        top: 0px;
+        img{
+            width: 15%;
+            height: auto;
+        }
+        .fa-bars{
+            display: none;
+        }
+        ul{
+            display: flex;
+            :first-child{
+                box-shadow: 0px 5px $color4 ;
+            }
+            a{
+                list-style: none;
+                text-align: center;
+                text-decoration: none;
+                padding: 0 0 1rem 0;
+                margin: 0 1em;
+                color: $color1;
+                font-size: clamp(1rem, 1.5rem, 2rem);
+                align-self: center;
+                &:hover{
+                    box-shadow: 0px 5px $color4 ;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 710px) {
+    header{
+        nav{
+            justify-content: space-between;
+            img{
+                width: 22%;
+                height: auto;
+                margin: 0 2em;
+            }
+            .fa-bars{
+                display: block;
+                align-self: center;
+                border: 2px solid $color1;
+                border-radius: 10px;
+                padding: .5rem;
+                margin: 0 2rem;
+                color: $color1;
+                cursor: pointer;
+                &:hover{
+                    color: $color3;
+                    border: 2px solid $color3;
+                }
+            }
+            ul{
+                display: none;
+            }
+        }
+    }
+}
+
+.message{
+    margin: 4rem 0 0 0;
+    h2{
+        text-align: center;
+        color: $color4;
+        font-size: 2rem;
+        margin: 0;
+    }
+    h3{
+        text-align: center;
+        color: $color3;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    img{
+        width: 5%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 710px) {
+    .message{
+        margin: 3rem;
+        img{
+            width: 10%;
+            height: auto;
+        }
+    }
+}
+.content{
+    margin: 6rem 4rem;
+    display: flex;
+    justify-content: space-around;
+    img{
+        width: 35%;
+        height: auto;
+        transform: rotate(-15deg);
+    }
+    .reflexion{
+        width: 50%;
+        margin: 0;
+        color: $Color2;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-align: justify;
+        h3{
+            color: $color3;
+            box-shadow: -5px 0px $color4;
+            padding: .5rem 0 .5rem .7rem;
+            font-size: 1.5rem;
+            margin: 0 0 0 3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .content{
+        flex-direction: column;
+        justify-content: space-around;
+        img{
+            width:80%;
+            height: auto;
+            margin: 0 auto 3rem auto;
+        }
+        .reflexion{
+            width: 100%;
+        }
+    }
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 4rem;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .situation{
+        padding: 3rem .5rem;
+        h3{
+            color: $color1;
+            font-size: 1.6rem;
+            text-align: center;
+            letter-spacing: 1rem ;
+        }
+        p{
+            color: $Color2;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .grid{
+        display: block;
+        margin: 0;
+    }
+}
+.quote{
+    margin: 3rem 4rem 0 4rem;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 710px) {
+    .quote{
+        display: block;
+        margin: 0 1rem;
+    }
+}
+footer{
+    background-color: $Color2;
+    display: grid;
+    gap: 3rem;
+    padding: 2rem 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    color: $color5;
+    .column1, .column2, .column3{
+        h3{
+            color: $color3;
+            span{
+                color: $color5;
+            }
+        }
+        p{
+            text-align: justify;
+        }
+
+        .fa-twitter{
+            color: skyblue;
+            text-decoration: none;
+        }
+        .fa-pinterest{
+            color: rgb(136, 27, 179);
+            text-decoration: none;
+        }
+        .fa-youtube{
+            color: rgb(230, 13, 132);
+            text-decoration: none;
+        }
+        .fa-instagram{
+            color: rgb(141, 34, 118);
+            text-decoration: none;
+        }
+    }
+}
+
+@media screen and (max-width: 710px) {
+    footer{
+        display: block;
+        margin: 0;
+    }
+}
